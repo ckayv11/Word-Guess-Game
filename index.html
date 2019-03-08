@@ -4,20 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <title>Word Guess Game</title>
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/jpg" href="assets/images/nightkingicon.jpg">
     <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
+    <div class="jumbotron jumbotron-fluid bg-primary text-center text-white">
+      <h1>Game of Words</h1>
+    </div>
 
+    <div class="container text-white mb-5">
 
+        <div class="row">
+           <div class="col-md-6 mt-5 mb-3">
+              <iframe src="https://giphy.com/embed/1002qxOu222y0E" width="360" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/game-of-thrones-hbo-deal-with-it-1002qxOu222y0E"></a></p>
+           </div>
+        
+           <div class="col-md-6">
+              <div class="card bg-transparent mb-3 text-center">
+                <div class="card-body">
+                    <h4>Press any key to get started</h4>
+                </div>
+              </div>
 
+<!--Current Word Container-->
 
+              <div class="card bg-dark mb-3 text-center">
+              <div class="card-header text-primary"><h5>Current Word</h5></div>
+              <div class="card-body">
+                <p class="card-text" id="currentword">_ _ _ _ _ _ _ _ _ _</p>
+              </div>
+              </div>
 
+<!--Letters Guessed Container-->
 
+              <div class="card bg-dark mb-3 text-center">
+              <div class="card-header text-primary"><h5>Letters Already Guessed</h5></div>
+              <div class="card-body">
+                <p class="card-text" id="lettersguessed">_ _ _ _ _ _ _ _ _ _</p>
+              </div>
+              </div>
 
+<!--Scoreboard container-->
 
+              <div class="card bg-dark mb-3 text-center">
+              <div class="card-header text-primary"><h5>Scoreboard</h5></div>
+              <div class="card-body">
+                 <p class="card-text" id="guessesremaining">Guesses Remaining:</p>
+                 <p class="card-text" id="wins">Wins:</p>
+                 <p class="card-text" id="losses">Losses:</p>
+              </div>
+              </div>
+           </div>
+        </div>
+    
+    </div>
+    
+  <script type="text/javascript" src="assets/javascript/gotgame.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 

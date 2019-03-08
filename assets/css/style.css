@@ -1,0 +1,19 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url('../Game\ of\ Thrones.ttf')
+}
+
+.jumbotron {
+    font-family: myFirstFont;
+    background-image: url('../images/whitewalker.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body, html {
+    background-color: black;
+}
+
+.container {
+    font-family: myFirstFont;
+}
