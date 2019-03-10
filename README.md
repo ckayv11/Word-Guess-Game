@@ -17,8 +17,8 @@
  5. Refresh the page to stop the game
  
 **Tips:**
-* The [Letters Already Guessed] countdown only goes down if you guess the wrong letter
-* Check to see the wrong guesses you already made at the bottom to narrow down your choices
+* The [Guesses Remaining] countdown only goes down if you guess the wrong letter
+* Check to see the wrong guesses you already made under [Letters Already Guessed] to narrow down your choices
 
 **How to know if you won:**
 * Screen displays animated gif of the correct answer and theme music plays. It will continue to play to keep you motivated to keep winning!
