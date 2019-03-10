@@ -4,7 +4,7 @@
 
 **Theme:** Game of Thrones
 
-**Link to Live Game:** 
+**Link to Live Game:** https://ckayv11.github.io/Word-Guess-Game/
 
 **Objective:** Guess the correct word and earn a point!
 
@@ -17,18 +17,18 @@
  5. Refresh the page to stop the game
  
 **Tips:**
-  *The [Letters Already Guessed] countdown only goes down if you guess the wrong letter
-  *Check to see the wrong guesses you already made at the bottom to narrow down your choices
+* The [Letters Already Guessed] countdown only goes down if you guess the wrong letter
+* Check to see the wrong guesses you already made at the bottom to narrow down your choices
 
 **How to know if you won:**
-  *Screen displays animated gif of the correct answer and theme music plays. It will continue to play to keep you motivated to keep winning!
-  *Wins increase by one.
-  *Refer to **Scoreboard** for guesses remaining, wins, and losses.
+* Screen displays animated gif of the correct answer and theme music plays. It will continue to play to keep you motivated to keep winning!
+* Wins increase by one.
+* Refer to **Scoreboard** for guesses remaining, wins, and losses.
 
 
 **How to know if you lost:**
-  *Screen displays "Try Again" image
-  *Losses increase by one
-  *Refer to **Scoreboard** for guesses remaining, wins, and losses.
+* Screen displays "Try Again" image
+* Losses increase by one
+* Refer to **Scoreboard** for guesses remaining, wins, and losses.
 
-##Thanks for visiting and enjoy the game!##
+## Thanks for visiting and enjoy the game! ##
