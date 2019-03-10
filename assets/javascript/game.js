@@ -1,81 +1,80 @@
 //VARIABLES
-var words = ["lannister", "hodor", "jonsnow", "nightking", "tyrion", "dracarys", "dragon"];
+var wordBank = ["lannister", "hodor", "jonsnow", "nightking", "tyrion", "dracarys", "dragon"];
 
-//Empty variables to store values later
 var randomWord = "";
-var lettersOfWord = []
-var blanks = 0;
-var blanksAndCorrect = [];
+var lettersArray = [];
 var wrongGuess = [];
 
 //Counter Variables
+var guessesRemaining = 15;
 var wins = 0;
 var losses = 0;
-var guessesRemaining = 15;
 
 
 //MAIN GAME LOOP
 
-function Game() {
+function gameStart() {
     //computer generates random word from words array
-    randomWord = words[Math.floor(Math.random() * words.length)];
-
-    // split the individual word into separate arrays, and store in new array 
-    lettersOfWord = randomWord.split("");
-
-    //store length of word in blanks, for later use
-    blanks = lettersOfWord.length;
+    randomWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 
     //creating a loop to generate "_" for each letter in array stored in blanks
-    for (var i = 0; i < blanks; i++) {
-        blanksAndCorrect.push("_");
+    for (var i = 0; i < randomWord.length; i++) {
+        lettersArray[i] = "_";
     }
 
     //showing the "_" within HTML
-    document.getElementById("currentword").innerHTML = "  " + blanksAndCorrect.join("  ");
+    document.getElementById("currentword").innerHTML = "  " + lettersArray.join("  ");
 
 };
 
 
-//AUDIO FUNCTION
+//AUDIO & CAPTION VARIABLES & FUNCTIONS
 
 var themesong = document.getElementById("themesong");
+var imagecaption = document.getElementById("imagecaption");
 
 function aud() {
 
-    if (randomWord === words[0]) {
+    if (randomWord === "lannister") {
         themesong.play();
         document.getElementById("image").src = "assets/images/lannister.gif";
+        document.getElementById("imagecaption").innerHTML = "Lannister";
     }
 
-    else if (randomWord === words[1]) {
+    else if (randomWord === "hodor") {
         themesong.play();
         document.getElementById("image").src = "assets/images/hodor.gif";
+        document.getElementById("imagecaption").innerHTML = "Hodor";
     }
 
-    else if (randomWord === words[2]) {
+    else if (randomWord === "jonsnow") {
         themesong.play();
         document.getElementById("image").src = "assets/images/jonsnow.gif";
+        document.getElementById("imagecaption").innerHTML = "JonSnow";
     }
 
-    else if (randomWord === words[3]) {
+    else if (randomWord === "nightking") {
         themesong.play();
         document.getElementById("image").src = "assets/images/nightking.gif";
+        document.getElementById("imagecaption").innerHTML = "Nightking";
     }
 
-    else if (randomWord === words[4]) {
+    else if (randomWord === "tyrion") {
         themesong.play();
         document.getElementById("image").src = "assets/images/tyrion.gif";
+        document.getElementById("imagecaption").innerHTML = "Tyrion";
     }
 
-    else if (randomWord === words[5]) {
+    else if (randomWord === "dracarys") {
         themesong.play();
         document.getElementById("image").src = "assets/images/dracarys.gif";
+        document.getElementById("imagecaption").innerHTML = "Dracarys";
     }
 
-    else if (randomWord === words[6]) {
+    else if (randomWord === "dragon") {
         themesong.play();
         document.getElementById("image").src = "assets/images/dragon.gif";
+        document.getElementById("imagecaption").innerHTML = "Dragon";
     }
 };
 
@@ -83,10 +82,10 @@ function aud() {
 //RESET FUNCTION
 
 function reset() {
-    guessesRemaining = 15;
+    lettersArray = [];
     wrongGuess = [];
-    blanksAndCorrect = [];
-    Game()
+    guessesRemaining = 15;
+    gameStart()
 };
 
 
@@ -96,7 +95,7 @@ function reset() {
 function checkLetters(letter) {
     var letterInWord = false;
     //if the generated randomword is equal to the letter entered... then variable is true
-    for (var i = 0; i < blanks; i++) {
+    for (var i = 0; i < randomWord.length; i++) {
         if (randomWord[i] == letter) {
             letterInWord = true;
         }
@@ -104,9 +103,9 @@ function checkLetters(letter) {
     //if letterInWord (false)
     if (letterInWord) {
         //check each letter to see if it matches word
-        for (var i = 0; i < blanks; i++) {
+        for (var i = 0; i < randomWord.length; i++) {
             if (randomWord[i] == letter) {
-                blanksAndCorrect[i] = letter;
+                lettersArray[i] = letter;
             }
         }
     }
@@ -115,51 +114,47 @@ function checkLetters(letter) {
         wrongGuess.push(letter);
         guessesRemaining--;
     }
-    console.log(blanksAndCorrect);
 };
 
 //FINAL COMPLETE FUNCTION
 
 //check to see if player won...
 function complete() {
-    console.log("wins:" + wins + "| losses:" + losses + "| guessesremaining:" + guessesRemaining)
-
-    //if WON...then alert, play audio, display image and reset new round
-    if (lettersOfWord.toString() == blanksAndCorrect.toString()) {
+    //if WON...then add a point to wins, play audio, display image and reset new round
+    if (lettersArray.indexOf("_") == -1) {
         wins++;
         aud()
         reset()
-        //display wins on screen
         document.getElementById("wins").innerHTML = " " + wins;
+        
 
-        //if LOST...then alert and reset new round
+    //if LOST...then add to the losses, display image
     } else if (guessesRemaining === 0) {
         losses++;
         reset()
         document.getElementById("image").src = "assets/images/arya.jpg"
+        document.getElementById("imagecaption").innerHTML = "Sorry!";
         document.getElementById("losses").innerHTML = " " + losses;
     }
     //display losses on screen && guesses remaining countdown
-    document.getElementById("currentword").innerHTML = "  " + blanksAndCorrect.join(" ");
+    document.getElementById("currentword").innerHTML = " " + lettersArray.join(" ");
     document.getElementById("guessesremaining").innerHTML = " " + guessesRemaining;
 };
 
 
-//EXECUTE CODE 
+//EXECUTE CODE //Key Up
 
 //call start game function
-Game()
+gameStart()
 
 //check for keyup then store in guesses
 document.onkeyup = function (event) {
-    var guesses = String.fromCharCode(event.keyCode).toLowerCase();
+    var guesses = event.key;
     //check to see if guess entered matches value of random word
     checkLetters(guesses);
     //process wins/loss 
     complete();
-    //store player guess in console for reference 
-    console.log(guesses);
-
     //display/store incorrect letters on screen
     document.getElementById("lettersguessed").innerHTML = "  " + wrongGuess.join(" ");
+    
 };

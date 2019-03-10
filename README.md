@@ -4,9 +4,10 @@
 
 **Theme:** Game of Thrones
 
+**Objective:** Guess the correct word and earn a point!
+
 **Link to Live Game:** https://ckayv11.github.io/Word-Guess-Game/
 
-**Objective:** Guess the correct word and earn a point!
 
 **Instructions:**
  1. Press any key to start guessing
@@ -16,9 +17,6 @@
  4. If you run out of guesses, you **lose** the round
  5. Refresh the page to stop the game
  
-**Tips:**
-* The [Guesses Remaining] countdown only goes down if you guess the wrong letter
-* Check to see the wrong guesses you already made under [Letters Already Guessed] to narrow down your choices
 
 **How to know if you won:**
 * Screen displays animated gif of the correct answer and theme music plays. It will continue to play to keep you motivated to keep winning!
@@ -31,4 +29,6 @@
 * Losses increase by one
 * Refer to **Scoreboard** for guesses remaining, wins, and losses.
 
+
 ## Thanks for visiting and enjoy the game! ##
+
