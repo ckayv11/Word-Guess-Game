@@ -17,3 +17,60 @@ body, html {
 .container {
     font-family: myFirstFont;
 }
+
+span {
+    padding-left: 3px;
+    padding-right: 3px;
+    background-color: transparent; 
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+input {
+    border: solid white 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+    background-color: transparent; 
+}
+
+/* Media Queries*/
+
+@media screen and (max-width: 1146px) {
+    #image {
+        width: 100%;
+        height: 300px;
+    }
+
+}
+
+@media screen and (max-width: 980px) {
+    #image {
+        width: 100%;
+        height: 300px;
+    }
+  
+  }
+  
+  @media screen and (max-width: 768px) {
+    #image {
+        max-width: 480px;
+        max-height: 480px;
+    }
+
+  }
+  
+  @media screen and (max-width: 640px) {
+    #image {
+        width: 100%;
+        height: auto;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+   
+    #image {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
