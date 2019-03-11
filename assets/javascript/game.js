@@ -6,7 +6,7 @@ var lettersArray = [];
 var wrongGuess = [];
 
 //Counter Variables
-var guessesRemaining = 15;
+var guessesRemaining = 10;
 var wins = 0;
 var losses = 0;
 
@@ -84,7 +84,7 @@ function aud() {
 function reset() {
     lettersArray = [];
     wrongGuess = [];
-    guessesRemaining = 15;
+    guessesRemaining = 10;
     gameStart()
 };
 

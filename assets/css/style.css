@@ -26,12 +26,6 @@ span {
     margin-left: 5px;
 }
 
-input {
-    border: solid white 2px;
-    padding-left: 3px;
-    padding-right: 3px;
-    background-color: transparent; 
-}
 
 /* Media Queries*/
 
