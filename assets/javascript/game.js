@@ -159,6 +159,8 @@ document.onkeyup = function (event) {
     
 };
 
-focusMethod = function getFocus() {           
-    document.getElementById("myTextField").focus();
+focusMethod = function getFocus() {          
+    document.getElementById("myButton").focus();
   }
+  
+
