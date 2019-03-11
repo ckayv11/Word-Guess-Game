@@ -158,3 +158,7 @@ document.onkeyup = function (event) {
     document.getElementById("lettersguessed").innerHTML = "  " + wrongGuess.join(" ");
     
 };
+
+focusMethod = function getFocus() {           
+    document.getElementById("myTextField").focus();
+  }
