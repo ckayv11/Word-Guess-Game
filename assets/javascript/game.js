@@ -161,15 +161,11 @@ document.onkeyup = function (event) {
     
 };
 
-document.ontouchend = function (event) {
-    var guesses = event.key;
-    //check to see if guess entered matches value of random word
-    checkLetters(guesses);
-    //process wins/loss 
-    complete();
-    //display/store incorrect letters on screen
-    document.getElementById("lettersguessed").innerHTML = "  " + wrongGuess.join(" ");
-    
-};
+var clickEvent = (function() {
+    if ('ontouchstart' in document.documentElement === true)
+      return 'touchstart';
+    else
+      return 'click';
+  })();
 
 
