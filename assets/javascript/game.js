@@ -110,11 +110,13 @@ function checkLetters(letter) {
         }
     }
     //otherwise, push the incorrect guess in the wrong guesses section, and reduce remaining guesses
-    else {
+    else if (wrongGuess.indexOf(letter) === -1) {
         wrongGuess.push(letter);
         guessesRemaining--;
     }
 };
+
+
 
 //FINAL COMPLETE FUNCTION
 
