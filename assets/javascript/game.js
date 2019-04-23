@@ -150,7 +150,8 @@ function complete() {
 gameStart()
 
 //check for keyup then store in guesses
-document.on("keyup input", function (event) {
+document.addEventListener("keyup", function (event) {
+    console.log(event);
     var guesses = event.key;
     //check to see if guess entered matches value of random word
     checkLetters(guesses);
@@ -159,7 +160,18 @@ document.on("keyup input", function (event) {
     //display/store incorrect letters on screen
     document.getElementById("lettersguessed").innerHTML = "  " + wrongGuess.join(" ");
     
-});
+}) 
 
+document.addEventListener("touchend", function (event) {
+    console.log(event);
+    var guesses = event.key;
+    //check to see if guess entered matches value of random word
+    checkLetters(guesses);
+    //process wins/loss 
+    complete();
+    //display/store incorrect letters on screen
+    document.getElementById("lettersguessed").innerHTML = "  " + wrongGuess.join(" ");
+    
+}) 
 
 
