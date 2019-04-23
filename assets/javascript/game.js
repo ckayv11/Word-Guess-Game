@@ -149,9 +149,9 @@ function complete() {
 //call start game function
 gameStart()
 
-window.onload = function() {
-    document.getElementById("input-field").focus();
-  };
+// window.onload = function() {
+//     document.getElementById("input-field").focus();
+//   };
 
 //check for keyup then store in guesses
 document.addEventListener("keyup", function (event) {
@@ -166,7 +166,7 @@ document.addEventListener("keyup", function (event) {
     
 }) 
 
-document.getElementById("input-field").addEventListener("touchend", function (event) {
+document.addEventListener("touchend", function (event) {
     console.log(event);
     var guesses = event.key;
     //check to see if guess entered matches value of random word
