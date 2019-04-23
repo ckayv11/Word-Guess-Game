@@ -118,7 +118,7 @@ function checkLetters(letter) {
 
 //Reset input function
 function resetInputField() {
-    document.getElementById("input-field").reset();
+    document.getElementById("input-field").value = '';
 }
 
 //FINAL COMPLETE FUNCTION
