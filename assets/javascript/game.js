@@ -116,7 +116,10 @@ function checkLetters(letter) {
     }
 };
 
-
+//Reset input function
+function resetInputField() {
+    document.getElementById("input-field").reset();
+}
 
 //FINAL COMPLETE FUNCTION
 
@@ -128,6 +131,7 @@ function complete() {
         aud()
         reset()
         document.getElementById("wins").innerHTML = " " + wins;
+        resetInputField()
         
 
     //if LOST...then add to the losses, display image

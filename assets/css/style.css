@@ -26,9 +26,9 @@ span {
     margin-left: 5px;
 }
 
-/* #input-field {
+#input-field {
     visibility: hidden;
-} */
+}
 
 
 /* Media Queries*/
@@ -54,6 +54,9 @@ span {
         max-width: 480px;
         max-height: 480px;
     }
+    #input-field {
+        visibility: visible;
+    }
 
   }
   
@@ -62,6 +65,9 @@ span {
         width: 100%;
         height: auto;
     }
+    #input-field {
+        visibility: visible;
+    }
   }
   
   @media screen and (max-width: 500px) {
@@ -69,6 +75,9 @@ span {
     #image {
       width: 100%;
       height: auto;
+    }
+    #input-field {
+        visibility: visible;
     }
   }
   
