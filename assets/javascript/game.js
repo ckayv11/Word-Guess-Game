@@ -150,7 +150,7 @@ function complete() {
 gameStart()
 
 //check for keyup then store in guesses
-document.onkeyup = function (event) {
+document.on("keyup input", function (event) {
     var guesses = event.key;
     //check to see if guess entered matches value of random word
     checkLetters(guesses);
@@ -159,7 +159,7 @@ document.onkeyup = function (event) {
     //display/store incorrect letters on screen
     document.getElementById("lettersguessed").innerHTML = "  " + wrongGuess.join(" ");
     
-};
+});
 
 
 
