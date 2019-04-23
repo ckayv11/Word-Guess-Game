@@ -26,6 +26,10 @@ span {
     margin-left: 5px;
 }
 
+#input-field {
+    visibility: hidden;
+}
+
 
 /* Media Queries*/
 

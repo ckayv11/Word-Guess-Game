@@ -149,6 +149,10 @@ function complete() {
 //call start game function
 gameStart()
 
+window.onload = function() {
+    document.getElementById("input-field").focus();
+  };
+
 //check for keyup then store in guesses
 document.addEventListener("keyup", function (event) {
     console.log(event);
