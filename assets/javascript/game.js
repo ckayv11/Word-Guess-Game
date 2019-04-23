@@ -166,7 +166,7 @@ document.addEventListener("keyup", function (event) {
     
 }) 
 
-document.addEventListener("touchend", function (event) {
+document.getElementById("input-field").addEventListener("touchend", function (event) {
     console.log(event);
     var guesses = event.key;
     //check to see if guess entered matches value of random word
